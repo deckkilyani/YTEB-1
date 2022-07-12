@@ -1,0 +1,16 @@
+ <% if(!locals.url || 
+        locals.url === 'Please Provide Link' || 
+        locals.url === 'Please Check Youtube Video Link'){ %> 
+    <p class="error"><%= locals.url %></p>
+  <% } else { %>
+  <div class="section-image">
+      <div class="size-download-btn">
+          <h4>HD Image Size (1280x720)</h4>
+          <button class="btn-submit" id="btn-download">
+            <a href="<%= locals.url %>" download="image.jpg">Download</a>
+          </button>
+      </div>
+      <img src="<%= locals.url %> " alt="image" class="rendered-image">
+      
+  </div>
+  <% } %>
